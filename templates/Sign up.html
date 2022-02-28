@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Position text in the middle of the page/image */
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 50%;
+  padding: 50px;
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #378940;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #378940;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+</style>
+</head>
+<body>
+
+
+<div class="bg-image"></div>
+<div class="bg-text">
+
+  <center><h1 style="font-family:Helvetica Neue;">Doctors Hub</h1></center>
+  <center><h2 style="font-family:Helvetica Neue;">Be a part of our Community</h2></center>
+  <form action="{{ url_for("addDoctor")}}" method="post">
+    <fieldset>
+
+      <label for="name" style="font-family:Helvetica Neue;">Name</label>
+      <input type="text" id="name" name="fullname" placeholder="Doctor's full name..">
+
+      <label for="sp" style="font-family:Helvetica Neue;">Speciality</label>
+      <input type="text" id="sp" name="spec" placeholder="Doctor's speciality..">
+
+      <label for="lc" style="font-family:Helvetica Neue;">Location</label>
+      <input type="text" id="lc" name="loc" placeholder="Doctor's location..">
+
+      <label for="ql" style="font-family:Helvetica Neue;">Qualification</label>
+      <input type="text" id="ql" name="qual" placeholder="Doctor's qualification..">
+
+      <label for="hn" style="font-family:Helvetica Neue;">Hospital's Name</label>
+      <input type="text" id="hn" name="hn" placeholder="Doctor's hospital's name..">
+
+      <label for="cn" style="font-family:Helvetica Neue;">Contact Number</label>
+      <input type="text" id="cn" name="cn" placeholder="Doctor's contact number..">
+
+      <label for="ex" style="font-family:Helvetica Neue;">Experience</label>
+      <input type="text" id="ex" name="exp" placeholder="Doctor's experience..">
+
+      <label for="rt" style="font-family:Helvetica Neue;">Rating</label>
+      <input type="text" id="rt" name="rt" placeholder="Doctor's rating..">
+
+      <input type="submit" value="Submit">
+    </fieldset>
+  </form>
+</div>
+
+</body>
+</html>
